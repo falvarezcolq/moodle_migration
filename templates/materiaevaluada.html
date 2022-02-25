@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      <div class="card">
+          <div class="card-header">Evaluar materia </div>
+          <div class="card-body">
+              <h5 class="card-title">Evaluacion de la materia: {{materia.sigla}} {{materia.materia}}  </h5>
+              <P>Periodo: Curso de verano 2021-2022</P>
+              <p> Estudiante  {{materia.nombres}} {{materia.paterno}} {{materia.materno}}</p>
+
+              <p class="error"> La materia ya fue evaluada ¡Gracias!
+              </p>
+             
+            
+              
+          </div>
+          
+          <div class="row">
+            <div class="col">
+              
+            </div>
+          </div>
+      </div>
+  
+{% endblock %}

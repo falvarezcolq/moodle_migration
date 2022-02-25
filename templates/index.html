@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header role="banner" itemscope="" itemtype="https://schema.org/WPHeader">
+      <div class="brand">
+        <div class="container">
+          <a href="/" itemprop="name" title="Evaluacion de calidad Academica" class="logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="246.152"
+              height="41.349"
+              viewBox="0 0 230.76784 38.764998"
+            >
+              <title>Evaluacion de calidad Academica</title>
+              <g stroke-width=".5" stroke-linejoin="round">
+                
+                <path
+                  stroke="#d1ddef"
+                  fill="#d1ddef"
+                  d="M19.383 3.543l-15.84 15.84 15.84 15.84 3.959-3.961-11.88-11.88 7.92-7.92 1.972 1.972-.01.01 9.9 9.898.01-.01.008.01 3.96-3.96-15.84-15.839zm11.861 0l-3.959 3.96 11.88 11.88-7.92 7.92-1.972-1.973.008-.008-9.898-9.9-.01.01-.008-.01-3.96 3.96 15.84 15.84 15.839-15.84-15.84-15.839z"
+                ></path>
+              </g>
+            </svg>
+
+            <span>Evaluacion de calidad Academica</span>
+          </a>
+        </div>
+      </div>
+
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">Ingrese su numero de CI</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Evaluacion de la materia</h5>
+                        <p class="card-text">Para realizar la evaluacion docente debe ingresar su carnet luego elegir una materia</p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
+                        <form action="/evaluador/" method="POST" >
+                            <div class="mb-3">
+                                <label for="ci" class="form-label">Ingrese carner de identidad C.I. :</label>
+                                <input type="text" class="form-control"  name="ci" id="ci" placeholder="Ej 7654321">
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" class="btn btn-primary" value="Buscar">
+                              </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-12">
+      <div class="card">
+          <div class="card-header">Materias cursadas</div>
+          <div class="card-body">
+              <h5 class="card-title">Elige materia a evaluar</h5>
+              <p class="card-text">Al seleccionar una materia se abrira el 
+                formulario de evaluacion de calidad de enseñanza
+              </p>  
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+               
+              <P>Periodo: Curso de verano 2021-2022</P>
+
+              <ul>
+
+                {% for materia in lista %}
+                <li><a href="/formulario/?type={{materia.code}}">Materia:  {{materia.sigla}} {{materia.name}}  </a></li>
+                {% endfor %}
+
+    
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}

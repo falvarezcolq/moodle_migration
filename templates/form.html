@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form action="http://127.0.0.1:5000/guardar_evaluacion" method="POST">
+   
+       
+        <label for="id_estudiante" >id_estudiante</label><input type="text" name="id_estudiante"  id="id_estudiante" > <br>
+        <label for="id_paralelo" >id_paralelo</label><input type="text" name="id_paralelo"  id="id_paralelo" > <br>
+        
+        <label for="id_materia" >id_materia</label><input type="text" name="id_materia"  id="id_materia" > <br>
+        <label for="id_inscripcion" >id_inscripcion</label><input type="text" name="id_inscripcion"  id="id_inscripcion" > <br>
+        <label for="ci" >ci</label><input type="text" name="ci"  id="ci" > <br>
+                 
+        <div> Pregunta:
+            <input type="radio" name="p1" value="1" id="p1-1"><label for="p1-1">malo</label>
+            <input type="radio" name="p1" value="2" id="p1-2"><label for="p1-2">regular</label>
+            <input type="radio" name="p1" value="3" id="p1-3" checked><label for="p1-3">bueno</label>
+            <input type="radio" name="p1" value="4" id="p1-4"><label for="p1-4">muybueno</label>
+            <input type="radio" name="p1" value="5" id="p1-5"><label for="p1-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p2" value="1" id="p2-1"><label for="p2-1">malo</label>
+            <input type="radio" name="p2" value="2" id="p2-2"><label for="p2-2">regular</label>
+            <input type="radio" name="p2" value="3" id="p2-3" checked><label for="p2-3">bueno</label>
+            <input type="radio" name="p2" value="4" id="p2-4"><label for="p2-4">muybueno</label>
+            <input type="radio" name="p2" value="5" id="p2-5"><label for="p2-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p3" value="1" id="p3-1"><label for="p3-1">malo</label>
+            <input type="radio" name="p3" value="2" id="p3-2"><label for="p3-2">regular</label>
+            <input type="radio" name="p3" value="3" id="p3-3" checked><label for="p3-3">bueno</label>
+            <input type="radio" name="p3" value="4" id="p3-4"><label for="p3-4">muybueno</label>
+            <input type="radio" name="p3" value="5" id="p3-5"><label for="p3-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p4" value="1" id="p4-1"><label for="p4-1">malo</label>
+            <input type="radio" name="p4" value="2" id="p4-2"><label for="p4-2">regular</label>
+            <input type="radio" name="p4" value="3" id="p4-3" checked><label for="p4-3">bueno</label>
+            <input type="radio" name="p4" value="4" id="p4-4"><label for="p4-4">muybueno</label>
+            <input type="radio" name="p4" value="5" id="p4-5"><label for="p4-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p5" value="1" id="p5-1"><label for="p5-1">malo</label>
+            <input type="radio" name="p5" value="2" id="p5-2"><label for="p5-2">regular</label>
+            <input type="radio" name="p5" value="3" id="p5-3" checked><label for="p5-3">bueno</label>
+            <input type="radio" name="p5" value="4" id="p5-4"><label for="p5-4">muybueno</label>
+            <input type="radio" name="p5" value="5" id="p5-5"><label for="p5-5">excelente</label>
+        </div>
+ 
+        <div> Pregunta:
+            <input type="radio" name="p6" value="1" id="p6-1"><label for="p6-1">malo</label>
+            <input type="radio" name="p6" value="2" id="p6-2"><label for="p6-2">regular</label>
+            <input type="radio" name="p6" value="3" id="p6-3" checked><label for="p6-3">bueno</label>
+            <input type="radio" name="p6" value="4" id="p6-4"><label for="p6-4">muybueno</label>
+            <input type="radio" name="p6" value="5" id="p6-5"><label for="p6-5">excelente</label>
+        </div>
+
+        <div> Pregunta:
+            <input type="radio" name="p7" value="1" id="p7-1"><label for="p7-1">malo</label>
+            <input type="radio" name="p7" value="2" id="p7-2"><label for="p7-2">regular</label>
+            <input type="radio" name="p7" value="3" id="p7-3" checked><label for="p7-3">bueno</label>
+            <input type="radio" name="p7" value="4" id="p7-4"><label for="p7-4">muybueno</label>
+            <input type="radio" name="p7" value="5" id="p7-5"><label for="p7-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p8" value="1" id="p8-1"><label for="p8-1">malo</label>
+            <input type="radio" name="p8" value="2" id="p8-2"><label for="p8-2">regular</label>
+            <input type="radio" name="p8" value="3" id="p8-3" checked><label for="p8-3">bueno</label>
+            <input type="radio" name="p8" value="4" id="p8-4"><label for="p8-4">muybueno</label>
+            <input type="radio" name="p8" value="5" id="p8-5"><label for="p8-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p9" value="1" id="p9-1"><label for="p9-1">malo</label>
+            <input type="radio" name="p9" value="2" id="p9-2"><label for="p9-2">regular</label>
+            <input type="radio" name="p9" value="3" id="p9-3" checked><label for="p9-3">bueno</label>
+            <input type="radio" name="p9" value="4" id="p9-4"><label for="p9-4">muybueno</label>
+            <input type="radio" name="p9" value="5" id="p9-5"><label for="p9-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p10" value="1" id="p10-1"><label for="p10-1">malo</label>
+            <input type="radio" name="p10" value="2" id="p10-2"><label for="p10-2">regular</label>
+            <input type="radio" name="p10" value="3" id="p10-3" checked><label for="p10-3">bueno</label>
+            <input type="radio" name="p10" value="4" id="p10-4"><label for="p10-4">muybueno</label>
+            <input type="radio" name="p10" value="5" id="p10-5"><label for="p10-5">excelente</label>
+        </div>
+
+        <div> Pregunta:
+            <input type="radio" name="p11" value="1" id="p11-1"><label for="p11-1">malo</label>
+            <input type="radio" name="p11" value="2" id="p11-2"><label for="p11-2">regular</label>
+            <input type="radio" name="p11" value="3" id="p11-3" checked><label for="p11-3">bueno</label>
+            <input type="radio" name="p11" value="4" id="p11-4"><label for="p11-4">muybueno</label>
+            <input type="radio" name="p11" value="5" id="p11-5"><label for="p11-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p12" value="1" id="p12-1"><label for="p12-1">malo</label>
+            <input type="radio" name="p12" value="2" id="p12-2"><label for="p12-2">regular</label>
+            <input type="radio" name="p12" value="3" id="p12-3" checked><label for="p12-3">bueno</label>
+            <input type="radio" name="p12" value="4" id="p12-4"><label for="p12-4">muybueno</label>
+            <input type="radio" name="p12" value="5" id="p12-5"><label for="p12-5">excelente</label>
+        </div>
+ 
+        <div> Pregunta:
+            <input type="radio" name="p13" value="1" id="p13-1"><label for="p13-1">malo</label>
+            <input type="radio" name="p13" value="2" id="p13-2"><label for="p13-2">regular</label>
+            <input type="radio" name="p13" value="3" id="p13-3" checked><label for="p13-3">bueno</label>
+            <input type="radio" name="p13" value="4" id="p13-4"><label for="p13-4">muybueno</label>
+            <input type="radio" name="p13" value="5" id="p13-5"><label for="p13-5">excelente</label>
+        </div>
+
+        <div> Pregunta:
+            <input type="radio" name="p14" value="1" id="p14-1"><label for="p14-1">malo</label>
+            <input type="radio" name="p14" value="2" id="p14-2"><label for="p14-2">regular</label>
+            <input type="radio" name="p14" value="3" id="p14-3" checked><label for="p14-3">bueno</label>
+            <input type="radio" name="p14" value="4" id="p14-4"><label for="p14-4">muybueno</label>
+            <input type="radio" name="p14" value="5" id="p14-5"><label for="p14-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p15" value="1" id="p15-1"><label for="p15-1">malo</label>
+            <input type="radio" name="p15" value="2" id="p15-2"><label for="p15-2">regular</label>
+            <input type="radio" name="p15" value="3" id="p15-3" checked><label for="p15-3">bueno</label>
+            <input type="radio" name="p15" value="4" id="p15-4"><label for="p15-4">muybueno</label>
+            <input type="radio" name="p15" value="5" id="p15-5"><label for="p15-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p16" value="1" id="p16-1"><label for="p16-1">malo</label>
+            <input type="radio" name="p16" value="2" id="p16-2"><label for="p16-2">regular</label>
+            <input type="radio" name="p16" value="3" id="p16-3" checked><label for="p16-3">bueno</label>
+            <input type="radio" name="p16" value="4" id="p16-4"><label for="p16-4">muybueno</label>
+            <input type="radio" name="p16" value="5" id="p16-5"><label for="p16-5">excelente</label>
+        </div>
+         
+        <div> Pregunta:
+            <input type="radio" name="p17" value="1" id="p17-1"><label for="p17-1">malo</label>
+            <input type="radio" name="p17" value="2" id="p17-2"><label for="p17-2">regular</label>
+            <input type="radio" name="p17" value="3" id="p17-3" checked><label for="p17-3">bueno</label>
+            <input type="radio" name="p17" value="4" id="p17-4"><label for="p17-4">muybueno</label>
+            <input type="radio" name="p17" value="5" id="p17-5"><label for="p17-5">excelente</label>
+        </div>
+
+         
+        <div> Pregunta:
+            <input type="radio" name="p18" value="1" id="p18-1"><label for="p18-1">malo</label>
+            <input type="radio" name="p18" value="2" id="p18-2"><label for="p18-2">regular</label>
+            <input type="radio" name="p18" value="3" id="p18-3" checked><label for="p18-3">bueno</label>
+            <input type="radio" name="p18" value="4" id="p18-4"><label for="p18-4">muybueno</label>
+            <input type="radio" name="p18" value="5" id="p18-5"><label for="p18-5">excelente</label>
+        </div>
+
+        <div>
+            pregunta
+            <input type="radio" name="p19" value="1" id="p19-1"><label for="p19-1">malo</label>
+            <input type="radio" name="p19" value="2" id="p19-2"><label for="p19-2">regular</label>
+            <input type="radio" name="p19" value="3" id="p19-3" checked><label for="p19-3">bueno</label>
+            <input type="radio" name="p19" value="4" id="p19-4"><label for="p19-4">muybueno</label>
+            <input type="radio" name="p19" value="5" id="p19-5"><label for="p19-5">excelente</label>
+        </div>
+
+        <div>
+            pregunta
+            <input type="radio" name="p20" value="1" id="p20-1"><label for="p20-1">malo</label>
+            <input type="radio" name="p20" value="2" id="p20-2"><label for="p20-2">regular</label>
+            <input type="radio" name="p20" value="3" id="p20-3" checked><label for="p20-3">bueno</label>
+            <input type="radio" name="p20" value="4" id="p20-4"><label for="p20-4">muybueno</label>
+            <input type="radio" name="p20" value="5" id="p20-5"><label for="p20-5">excelente</label>
+        </div>
+
+        <button>aceptar</button>
+    </form>
+    
+</body>
+</html>

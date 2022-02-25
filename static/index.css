@@ -1,0 +1,29 @@
+.midiv{
+    color:aqua;
+
+}
+
+.logo{
+    color:cornsilk;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.logo:hover{
+    color:cornsilk;
+}
+
+.brand{
+    background-color: cornflowerblue;
+}
+
+.radio-buttons{
+    margin-left: 25px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.error{
+    color: #a44;
+}
+

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      <div class="card">
+          <div class="card-header">Migrar estudiante por carnet</div>
+          <div class="card-body">
+              <h5 class="card-title"> Migrar estudiante por carnet </P>
+              <a href="/"> ...Volver al inicio</a>
+              <br>
+              <br>
+              
+              <div class="row">
+                <div class="col">
+                  <form action="/migrarestudiante/" method='POST'class="form">
+                    <div class="form-group">
+                      <Label for="ci">Numero de C.I.</Label>
+                      <input class="form-control" name="ci" id="ci" placeholder="ejemplo: 12143 "/>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-primary" value="Buscar y actualizar estudiante"> 
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <pre>
+                    {{message}}
+                  </pre>
+                </div>
+              </div>
+          </div>
+          
+          
+      </div>
+  
+{% endblock %}
