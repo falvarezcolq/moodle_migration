@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      <div class="card">
+          <div class="card-header">Migrar estudiante por carnet</div>
+          <div class="card-body">
+              <h5 class="card-title"> Migrar estudiantes por rango </P>
+              <a href="/"> ...Volver al inicio</a>
+              <br>
+              <br>
+              
+              <div class="row">
+                <div class="col">
+                  <form action="/migrar/" method='POST'class="form">
+                    <div class="rom">
+                      <div class="col-lg-2">
+                        <div class="form-group">
+                          <Label for="init">Inicio</Label>
+                          <input class="form-control" name="init" id="init" placeholder="ej: 1 " type="number" value="{{init}}"/>
+                        </div>
+                      </div>
+                      <div class="col-lg-2">
+                        <div class="form-group">
+                          <Label for="cant">Cantidad</Label>
+                          <input class="form-control" name="cant" id="cant" placeholder="ej: 100" type="number" value="{{cant}}"/>
+                        </div>
+                      </div>
+                    </div>
+
+                   
+                    <br>
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-primary" value="Actualizar"> 
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <pre>
+                    {{message}}
+                  </pre>
+                </div>
+              </div>
+          </div>
+          
+          
+      </div>
+  
+{% endblock %}

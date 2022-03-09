@@ -131,7 +131,70 @@ def get_students():
 
     return render_template('student_report.html', message=message)
 
+@app.route('/migrar/',methods=['GET','POST'])
+def migrate_all_students():
+    message = ''
+    init = 0
+    cant = 10
+    if request.method=='POST':
+        init = request.form['init']
+        cant = request.form['cant']
+        message = migrate(initial=init,quantity=cant)
+        return render_template('migrar.html',message=message,init=init,cant=cant)
+    return render_template('migrar.html',message=message,init=init,cant=cant)
 
+
+#migrate function
+def migrate(initial,quantity):
+    courses={ "-A-I-2022": 7, "-B-I-2022": 6, }
+    moodle_courses = moodle.CourseList()
+    for c in moodle_courses:
+        courses[c.shortname]=c.id
+
+    gestion='ADMEMP20221'
+    db = DB('administracion')    
+    data = db.query_get_students(gestion)
+    
+    users=[]
+    for item in data:
+        dbuser=item[0]
+        users.append(moodle.User(
+            username=dbuser["id_estudiante"], 
+            password=dbuser["dip"], 
+            firstname =dbuser["firstname"],
+            lastname =dbuser["lastname"], 
+            email = dbuser["correo"], 
+            materias = dbuser["materias"]
+        ))
+    message = ""
+    init = initial
+    cant = quantity
+    end= init + cant if init+cant  < len(users) else  len(users) 
+    i = initial
+    contador = 0
+    
+    for user in users[init:end]:
+        i=i+1
+        print(i)
+        if user.get_moodle_user():
+            user.get_courses_from_moodle()
+            m = user.update_courses(courses)
+            if m != "":
+                contador = contador + 1
+                message = message + "\n" + str(i) + m
+        else:
+            print("Usuario nuevo ")
+            user.create()   
+            # user.get_courses_from_moodle()
+            m = user.update_courses(courses)
+            if m != "":
+                contador = contador + 1
+                message = message + "\n" + str(i) 
+                message = message + "\nUsuario nuevo"
+                message = message + m
+    message = "Usuarios actualizados: " +str(contador)+ "\n" + message
+
+    return message
 
 
 @app.route('/migrarestudiante/', methods = ['GET','POST'])
