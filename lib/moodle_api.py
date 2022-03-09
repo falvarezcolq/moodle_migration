@@ -216,16 +216,18 @@ class User():
 
         for materia_m in materias_moodle:
             if materia_m not in materias:
+                # if 'MESA' not in materia_m:
+                #if 'MESA' not in materia_m and 'AYMARA' not in materia_m and 'AUX' not in materia_m:
                 remove_list.append(materia_m) 
 
         if len(add_list) >0 or len(remove_list)>0 or mostrar:
             message = message + "\n"+ str("******************************************************")
             message = message + "\n"+ str(self.username + ": " + self.firstname + " " + self.lastname)
-            message = message + "\n"+ str(materias)
-            message = message + "\n"+ str(materias_moodle) 
+            message = message + "\n SSA:    "+ str(materias)
+            message = message + "\n MOODLE: "+ str(materias_moodle) 
             message = message + "\n"+ str("------------------------------------")
-            message = message + "\n"+ str(add_list)
-            message = message + "\n"+ str(remove_list) 
+            message = message + "\n ADDED:  "+ str(add_list)
+            message = message + "\n DELETED:"+ str(remove_list) 
             
             print(message) 
             self.add_courses(add_list=add_list,courses=courses)

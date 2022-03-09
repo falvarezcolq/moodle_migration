@@ -167,10 +167,10 @@ def migrate(initial,quantity):
             materias = dbuser["materias"]
         ))
     message = ""
-    init = initial
-    cant = quantity
+    init = int(initial)
+    cant = int(quantity)
     end= init + cant if init+cant  < len(users) else  len(users) 
-    i = initial
+    i = int(initial)
     contador = 0
     
     for user in users[init:end]:
