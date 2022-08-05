@@ -58,7 +58,7 @@ class DB:
 
     def query_get_students(self,gestion):
         query = ("""select row_to_json(row) 
-                from (select distinct i.id_estudiante,d.dip, (d.paterno ||' '||d.materno)as lastname, d.nombres as firstname, d.correo, list(m.sigla||'-'||tp.letra||'-I-2022') materias
+                from (select distinct i.id_estudiante,d.dip, (d.paterno ||' '||d.materno)as lastname, d.nombres as firstname, d.correo, list(m.sigla||' - '||tp.letra||' II - 2022') materias
                 from inscritos i, paralelos p, materias m, tiposparalelos tp, estudiantes e , dpersonales d
                 where i.id_inscripcion=%s
                 and i.id_inscripcion=p.id_inscripcion
@@ -69,7 +69,7 @@ class DB:
                 and e.id_persona=d.id_persona
                 group by i.id_estudiante, d.dip, d.paterno, d.materno, d.nombres, d.correo, d.celular
                 order by  d.nombres) as row """ )
-
+       
         self._cur.execute(query, (gestion,))
         return self._cur.fetchall()
    

@@ -181,12 +181,12 @@ class User():
 
     def get_courses_array(self):
         courses = self.materias.split(";")[1:]
-
+#  courses={ " - A II - 2022": 7, " - B II - 2022": 6, }
         for i in range(len(courses)):
-            if courses[i] == '-A-I-2022':
-                courses[i] = 'INGLES-A-I-2022'
-            elif courses[i] == '-B-I-2022':
-                courses[i] = 'INGLES-B-I-2022'
+            if courses[i] == ' - A II - 2022':
+                courses[i] = 'INGLES - A II - 2022'
+            elif courses[i] == ' - B II - 2022':
+                courses[i] = 'INGLES - B II - 2022'
 
         return courses
 

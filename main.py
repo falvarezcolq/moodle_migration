@@ -38,7 +38,7 @@ def index():
 
 @app.route('/revisar/', methods = ['GET'])
 def get_review():
-    gestion='ADMEMP20221'
+    gestion='ADMEMP20222'
     db = DB('administracion')    
     data = db.query_get_students(gestion)
     users=[]
@@ -87,7 +87,7 @@ def get_students():
     for c in moodle_courses:
         courses[c.shortname]=c.id
 
-    gestion='ADMEMP20221'
+    gestion='ADMEMP20222'
     db = DB('administracion')    
     data = db.query_get_students(gestion)
     
@@ -146,15 +146,17 @@ def migrate_all_students():
 
 #migrate function
 def migrate(initial,quantity):
-    courses={ "-A-I-2022": 7, "-B-I-2022": 6, }
+    courses={ "- A II - 2022": 7, "- B II - 2022": 6, }
+    courses={ }
     moodle_courses = moodle.CourseList()
-    for c in moodle_courses:
-        courses[c.shortname]=c.id
-
-    gestion='ADMEMP20221'
-    db = DB('administracion')    
-    data = db.query_get_students(gestion)
     
+    for c in moodle_courses:
+        courses[c.shortname]=c.id #load course from moodle
+        
+   
+    gestion='ADMEMP20222'  # gestion migracion
+    db = DB('administracion')    
+    data = db.query_get_students(gestion) #get estudents from db    
     users=[]
     for item in data:
         dbuser=item[0]
@@ -185,7 +187,7 @@ def migrate(initial,quantity):
         else:
             print("Usuario nuevo ")
             user.create()   
-            # user.get_courses_from_moodle()
+            user.get_courses_from_moodle()
             m = user.update_courses(courses)
             if m != "":
                 contador = contador + 1
@@ -208,7 +210,7 @@ def migrate_students():
         for c in moodle_courses:
             courses[c.shortname]=c.id
 
-        gestion='ADMEMP20221'
+        gestion='ADMEMP20222'
         db = DB('administracion') 
         ci=request.form['ci']  
         data = db.query_get_student_by_ci(gestion,ci)
